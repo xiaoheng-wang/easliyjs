@@ -1,6 +1,6 @@
 const Guide = [{ text: 'Get Started', link: '/guide/' }];
 
-const functions = [Guide, { text: 'getDevice', link: '/core/getDevice/' }];
+const functions = [Guide, { text: 'getDevice', link: '/packages/core/getDevice/' }];
 
 const vueHooks = [functions, { text: '建设中', link: '' }];
 
@@ -24,7 +24,7 @@ export default {
     socialLinks: [{ icon: 'github', link: 'https://github.com/easily/easily' }],
     nav: [
       { text: '指南', link: '/guide/' },
-      { text: '函数集合', link: '/core/getDevice/' },
+      { text: '函数集合', link: '/packages/core/getDevice/' },
     ],
     // 侧边栏
     sidebar: {

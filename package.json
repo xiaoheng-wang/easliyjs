@@ -9,8 +9,8 @@
     "build": "tsup",
     "test": "vitest test",
     "coverage": "vitest run --coverage",
-    "docs:dev": "vitepress dev packages",
-    "docs:build": "vitepress build packages",
+    "docs:dev": "pnpm -C docs dev",
+    "docs:build": "pnpm run -C docs build",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --max-warnings 0 --cache",
     "lint:fix": "pnpm run lint --fix",
     "format": "prettier --write --cache .",
@@ -34,7 +34,6 @@
     "prettier": "^3.2.5",
     "tsup": "^8.0.2",
     "typescript": "^5.4.2",
-    "vitepress": "1.0.0-rc.45",
     "vitest": "^1.4.0"
   },
   "lint-staged": {

@@ -1,0 +1,17 @@
+{
+  "name": "@easily/docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev . --mode development",
+    "build": "vitepress build .",
+    "serve": "vitepress serve ."
+  },
+  "devDependencies": {
+    "vitepress": "1.0.0-rc.45"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
