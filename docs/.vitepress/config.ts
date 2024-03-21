@@ -14,8 +14,8 @@ const DefaultSideBar = [
 ];
 
 export default {
-  base: '/',
-  title: 'velvet',
+  base: '/easilyjs/',
+  title: 'easilyjs',
   lang: 'zh-CN',
   themeConfig: {
     logo: '/logo.png',
