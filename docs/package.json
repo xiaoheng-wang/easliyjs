@@ -11,6 +11,9 @@
   "devDependencies": {
     "vitepress": "1.0.0-rc.45"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"

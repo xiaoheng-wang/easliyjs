@@ -41,5 +41,8 @@
       "pnpm run lint",
       "pnpm run format"
     ]
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
