@@ -1,1 +1,1 @@
-import { getDevice } from './getDevice';
+export * from './getDevice';
