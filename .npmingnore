@@ -21,3 +21,4 @@ coverage
 .vitepress
 .changeset
 meta/meta.json
+docs/
