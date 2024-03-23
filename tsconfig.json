@@ -16,10 +16,10 @@
     "skipDefaultLibCheck": true,
     "noUnusedLocals": true,
     "paths": {
-      "@easily/shared": ["./packages/shared/index.ts"],
-      "@easily/shared/*": ["./packages/shared/*"],
-      "@easily/core": ["./packages/core/index.ts"],
-      "@easily/core/*": ["./packages/core/*"]
+      "@easily-js/shared": ["./packages/shared/index.ts"],
+      "@easily-js/shared/*": ["./packages/shared/*"],
+      "@easily-js/core": ["./packages/core/index.ts"],
+      "@easily-js/core/*": ["./packages/core/*"]
     }
   },
   "include": ["packages", "packages/.vitepress/components/*.vue", "packages/.vitepress/*.ts", "meta", "vitest.config.ts", "*.d.ts"],

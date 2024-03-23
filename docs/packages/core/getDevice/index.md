@@ -9,7 +9,7 @@ category: UA
 ## Usage
 
 ```ts
-import { getDevice } from '@easily/core';
+import { getDevice } from '@easily-js/core';
 
 const browser = getDevice();
 
@@ -23,7 +23,7 @@ const browser = getDevice();
 - 浏览器（客户端）中使用 [ua 可选]
 
   ```ts
-  import { getDevice } from '@easily/core';
+  import { getDevice } from '@easily-js/core';
   // 未带参数
   const browser = getDevice();
 
@@ -35,7 +35,7 @@ const browser = getDevice();
 
   ```ts
   import http from 'http';
-  import { getDevice } from '@easily/core';
+  import { getDevice } from '@easily-js/core';
 
   http
     .createServer(function (req, res) {

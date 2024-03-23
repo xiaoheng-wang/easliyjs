@@ -61,7 +61,7 @@ importers:
 
   packages/core:
     devDependencies:
-      '@easily/shared':
+      '@easily-js/shared':
         specifier: workspace:^
         version: link:../shared
 

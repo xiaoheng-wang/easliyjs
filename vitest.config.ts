@@ -7,8 +7,8 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@easily/shared': resolve(__dirname, 'packages/shared/index.ts'),
-      '@easily/core': resolve(__dirname, 'packages/core/index.ts'),
+      '@easily-js/shared': resolve(__dirname, 'packages/shared/index.ts'),
+      '@easily-js/core': resolve(__dirname, 'packages/core/index.ts'),
     },
   },
 });

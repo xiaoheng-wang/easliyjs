@@ -1,5 +1,5 @@
 {
-  "name": "@easily/core",
+  "name": "@easily-js/core",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/index.js",
@@ -24,6 +24,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@easily/shared": "workspace:^"
+    "@easily-js/shared": "workspace:^"
   }
 }

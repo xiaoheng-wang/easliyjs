@@ -1,4 +1,4 @@
-import { isString } from '@easily/shared';
+import { isString } from '@easily-js/shared';
 
 export const DEVICES = [
   {

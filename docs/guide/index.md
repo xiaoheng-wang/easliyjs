@@ -3,13 +3,13 @@
 ## 安装
 
 ```bash
-npm i @easily/core
+npm i @easily-js/core
 ```
 
 ## 简单使用
 
 ```ts
-import { getDevice } from '@easily/core';
+import { getDevice } from '@easily-js/core';
 
 const browser = getDevice();
 
