@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "release": "changeset publish",
+    "change": "changeset add",
+    "change:version": "changeset version",
+    "release": "pnpm build && pnpm release:only",
+    "release:only": "changeset publish",
     "dev": "tsup --watch",
     "build": "tsup",
     "test": "vitest test",
@@ -14,7 +17,10 @@
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --max-warnings 0 --cache",
     "lint:fix": "pnpm run lint --fix",
     "format": "prettier --write --cache .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clean": "pnpm -r clean && rimraf node_modules",
+    "clean:dist": "pnpm -r clean && rimraf dist",
+    "clear": "pnpm -r clear"
   },
   "keywords": [],
   "author": "",
@@ -33,6 +39,7 @@
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
     "tsup": "^8.0.2",
     "typescript": "^5.4.2",
     "vitest": "^1.4.0"
