@@ -19,3 +19,5 @@ packages/vue-hooks/index.ts
 packages/react-hooks/index.ts
 
 docs/.vitepress/cache/*
+
+play/
