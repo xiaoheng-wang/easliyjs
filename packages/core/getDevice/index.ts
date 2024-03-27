@@ -69,7 +69,7 @@ export const getDevice = (ua?: string) => {
 
   if (!isString(ua)) {
     // node runtimes env
-    if (global) return device;
+    if (typeof window === 'undefined') return device;
 
     ua = window.navigator.userAgent;
   }
