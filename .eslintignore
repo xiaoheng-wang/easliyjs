@@ -1,6 +1,8 @@
+
 dist
 node_modules
 coverage
 !.vitepress/
 !.changeset/
-play/*
+pnpm-lock.yaml
+play/
