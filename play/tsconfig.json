@@ -1,5 +1,5 @@
 {
-  "extends": "@easily-js/typescript-config/stencil.json",
+  "extends": "@easily-js/typescript-config/stencil",
   "compilerOptions": {
     "declaration": true
   }
