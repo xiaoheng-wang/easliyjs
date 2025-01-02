@@ -1,0 +1,15 @@
+{
+  "name": "@easily-js/typescript-config",
+  "version": "1.0.0",
+  "files": [
+    "base.json",
+    "stencil.json"
+  ],
+  "exports": {
+    "./base": "./base.json",
+    "./stencil": "./stencil.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

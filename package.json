@@ -1,0 +1,16 @@
+{
+  "name": "monorepo-config",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@easily-js/typescript-config": "workspace:^",
+    "eslint": "^9.17.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
