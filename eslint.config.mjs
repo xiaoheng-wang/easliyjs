@@ -6,9 +6,6 @@ export default antfu({
     indent: 2, // 4, or 'tab'
     quotes: 'single', // or 'double'
   },
-  // TypeScript 和 Vue 是自动检测的，你也可以显式启用它们
-  typescript: true,
-  vue: true,
 
   // 规则覆盖
   vue: {
@@ -24,4 +21,6 @@ export default antfu({
   // 关闭对 JSON 和 YAML 的支持
   jsonc: false,
   yaml: false,
+
+  ignores: ['pnpm-lock.yaml'],
 })
