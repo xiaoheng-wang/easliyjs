@@ -4,7 +4,6 @@ import HelloWorld from './components/HelloWorld.vue'
 
 const re = ref('')
 
-const a = 1
 const b = 2
 </script>
 
