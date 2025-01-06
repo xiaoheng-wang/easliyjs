@@ -3,7 +3,7 @@
   "display": "Default",
   "compilerOptions": {
     "target": "ES2022",
-    "removeComments": true,
+    "removeComments": false,
     "strict": true,
     "declaration": true,
     "declarationDir": "types",

@@ -7,13 +7,18 @@
     "coverage": "vitest run --coverage",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.json --max-warnings 0 --cache",
     "lint:fix": "pnpm  lint --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "dev": "tsup --watch",
+    "build": "tsup",
+    "dev:paly": "pnpm -C play dev"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.12.1",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@easily-js/typescript-config": "workspace:^",
+    "@easily-js/utils-shared": "workspace:^",
+    "@easily-js/utils-core": "workspace:^",
     "eslint": "^9.17.0",
     "eslint-plugin-format": "^0.1.3",
     "husky": "^8.0.0",
