@@ -10,15 +10,17 @@
     "prepare": "husky install",
     "dev": "tsup --watch",
     "build": "tsup",
-    "dev:paly": "pnpm -C play dev"
+    "dev:paly": "pnpm -C play dev",
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.12.1",
+    "@changesets/cli": "^2.27.11",
     "@commitlint/cli": "^19.6.1",
     "@commitlint/config-conventional": "^19.6.0",
     "@easily-js/typescript-config": "workspace:^",
-    "@easily-js/utils-shared": "workspace:^",
     "@easily-js/utils-core": "workspace:^",
+    "@easily-js/utils-shared": "workspace:^",
     "eslint": "^9.17.0",
     "eslint-plugin-format": "^0.1.3",
     "husky": "^8.0.0",
