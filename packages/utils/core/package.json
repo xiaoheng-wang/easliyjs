@@ -2,28 +2,18 @@
   "name": "@easily-js/utils-core",
   "version": "0.1.0",
   "description": "",
-  "main": "./dist/index.js",
-  "type": "module",
-  "module": "./dist/index.esm.js",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
   "unpkg": "./dist/index.global.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.js",
-      "import": "./dist/index.esm.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
     },
     "./*": "./*"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "files": [
-    "dist"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",

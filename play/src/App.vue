@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { isNumber } from '@easily-js/utils-shared'
 import HelloWorld from './components/HelloWorld.vue'
+
+isNumber(1)
 </script>
 
 <template>
