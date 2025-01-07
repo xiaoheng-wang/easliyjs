@@ -11,7 +11,10 @@
     "dev": "tsup --watch",
     "build": "tsup",
     "dev:paly": "pnpm -C play dev",
-    "release": "changeset publish"
+    "change": "changeset add",
+    "change:version": "changeset version",
+    "release": "pnpm build && pnpm release:only",
+    "release:only": "changeset publish"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.12.1",
