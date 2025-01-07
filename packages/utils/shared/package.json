@@ -1,6 +1,6 @@
 {
   "name": "@easily-js/utils-shared",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "./dist/index.mjs",
   "module": "./dist/index.mjs",
@@ -14,6 +14,9 @@
     },
     "./*": "./*"
   },
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
