@@ -5,7 +5,6 @@
 ```bash
 npm i @easily-js/core
 ```
-
 ## 简单使用
 
 ```ts
