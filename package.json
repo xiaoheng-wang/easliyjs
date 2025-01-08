@@ -10,6 +10,8 @@
     "prepare": "husky install",
     "dev": "tsup --watch",
     "build": "tsup",
+    "docs:dev": "pnpm -C docs dev",
+    "docs:build": "pnpm run -C docs build",
     "dev:paly": "pnpm -C play dev",
     "change": "changeset add",
     "change:version": "changeset version",
