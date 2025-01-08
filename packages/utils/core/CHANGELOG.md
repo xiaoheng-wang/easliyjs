@@ -1,5 +1,11 @@
 # @easily-js/utils-core
 
+## 2.0.0
+
+### Major Changes
+
+- [`084c5be`](https://github.com/xiaoheng-wang/easliyjs/commit/084c5be3b1c74df0b0a8d4ca63e66537d8ee3695) - 测试
+
 ## 1.0.0
 
 ### Major Changes
