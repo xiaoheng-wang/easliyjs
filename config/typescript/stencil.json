@@ -17,7 +17,6 @@
     "packages",
     "docs/.vitepress/components/*.vue",
     "docs/.vitepress/*.ts",
-    "meta",
     "vitest.config.ts",
     "*.d.ts",
     "play"
