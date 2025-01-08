@@ -1,8 +1,8 @@
 {
   "name": "@easily-js/utils-shared",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
-  "main": "./dist/index.mjs",
+  "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "unpkg": "./dist/index.global.js",
   "types": "./dist/index.d.ts",
