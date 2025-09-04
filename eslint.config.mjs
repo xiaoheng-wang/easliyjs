@@ -22,5 +22,12 @@ export default antfu({
   jsonc: false,
   yaml: false,
 
-  ignores: ['pnpm-lock.yaml', 'docs/**', 'scripts/**'],
+  ignores: [
+    'pnpm-lock.yaml',
+    'docs/**',
+    'scripts/**',
+    '**/components.d.ts',
+    '**/*.json',
+    '**/*.md',
+  ],
 })

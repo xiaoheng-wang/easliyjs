@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { isNumber } from '@easily-js/utils-shared'
 import HelloWorld from './components/HelloWorld.vue'
-
-isNumber(1)
 </script>
 
 <template>
@@ -15,6 +12,8 @@ isNumber(1)
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+
+  <EasyButton>2345432</EasyButton>
 </template>
 
 <style scoped>

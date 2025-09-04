@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup'
 
 const baseConfig = {
-  dts: true, // 添加 .d.ts 文件
+  dts: false, // 暂时禁用 .d.ts 文件生成以避免配置问题
   metafile: true, // 添加 meta 文件
   minify: true, // 压缩
   splitting: false,
@@ -19,8 +19,23 @@ export default defineConfig([
   },
   {
     entry: ['packages/utils/core/index.ts'],
-    format: ['cjs', 'esm', 'iife'],
+    format: ['cjs', 'esm'], // 对于有依赖的包，暂时只构建 cjs 和 esm
     outDir: 'packages/utils/core/dist',
+    external: ['@easily-js/utils-shared'], // 将内部依赖标记为外部依赖
+    ...baseConfig,
+  },
+  {
+    entry: ['packages/uesFormValidator/index.ts'],
+    format: ['cjs', 'esm'], // Vue 组件通常用 cjs 和 esm
+    outDir: 'packages/uesFormValidator/dist',
+    external: ['vue', 'async-validator'], // Vue 相关的外部依赖
+    ...baseConfig,
+  },
+  {
+    entry: ['packages/components/index.ts'],
+    format: ['cjs', 'esm'], // Vue 组件通常用 cjs 和 esm
+    outDir: 'packages/components/dist',
+    external: ['vue'], // Vue 相关的外部依赖
     ...baseConfig,
   },
 ])

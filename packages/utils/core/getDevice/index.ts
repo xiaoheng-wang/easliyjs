@@ -13,8 +13,8 @@ export const DEVICES = [
   {
     regs: [
       /\((ip(?:hone|od)[\w ]*);/i,
-      /\((ipad);[-\w\),; ]+apple/i,
-      /applecoremedia\/[\w\.]+ \((ipad)/i,
+      /\((ipad);[-\w),; ]+apple/i,
+      /applecoremedia\/[\w.]+ \((ipad)/i,
       /\b(ipad)\d\d?,\d\d?[;\]].+ios/i,
     ],
     vendor: 'Apple',
@@ -26,8 +26,8 @@ export const DEVICES = [
   {
     regs: [
       /\b((?:ag[rs][23]?|bah2?|sht?|btv)-a?[lw]\d{2})\b(?!.+d\/s)/i,
-      /(?:huawei|honor)([-\w ]+)[;\)]/i,
-      /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i,
+      /(?:huawei|honor)([-\w ]+)[;)]/i,
+      /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][0-359c][adn]?)\b(?!.+d\/s)/i,
     ],
     vendor: 'Huawei',
   },
@@ -36,9 +36,9 @@ export const DEVICES = [
       /\b(poco[\w ]+)(?: bui|\))/i, // Xiaomi POCO
       /\b; (\w+) build\/hm\1/i, // Xiaomi Hongmi 'numeric' models
       /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, // Xiaomi Hongmi
-      /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, // Xiaomi Redmi
-      /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite)?)(?: bui|\))/i, // Xiaomi Mi
-      /\b(mi[-_ ]?(?:pad)(?:[\w_ ]+))(?: bui|\))/i, // Mi Pad tablets
+      /\b(redmi[\-_ ]?[\w ]+)(?: bui|\))/i, // Xiaomi Redmi
+      /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?\d?\w?[_ ]?(?:plus|se|lite)?)(?: bui|\))/i, // Xiaomi Mi
+      /\b(mi[-_ ]?pad[\w ]+)(?: bui|\))/i, // Mi Pad tablets
     ],
     vendor: 'Xiaomi',
   },
@@ -64,9 +64,9 @@ export const DEVICES = [
 /**
  * 获取设备类型与供应商
  * @param ua window.navigator.userAgent
- * @returns { model: '', vendor: '' }
+ * @returns 包含设备型号和供应商信息的对象
  */
-export const getDevice = (ua?: string) => {
+export function getDevice(ua?: string) {
   const device = {
     model: '',
     vendor: '',
@@ -74,7 +74,8 @@ export const getDevice = (ua?: string) => {
 
   if (!isString(ua)) {
     // node runtimes env
-    if (typeof window === 'undefined') return device
+    if (typeof window === 'undefined')
+      return device
 
     ua = window.navigator.userAgent
   }
@@ -83,10 +84,11 @@ export const getDevice = (ua?: string) => {
   device.vendor = 'other'
 
   for (let i = 0; i <= DEVICES.length; i++) {
-    if (!DEVICES[i]) break
+    if (!DEVICES[i])
+      break
 
-    const { regs, vendor } = DEVICES[i] as { regs: RegExp[]; vendor: string }
-    const findVal = regs.find((item) => item.exec(ua as string))
+    const { regs, vendor } = DEVICES[i] as { regs: RegExp[], vendor: string }
+    const findVal = regs.find(item => item.exec(ua as string))
 
     if (findVal) {
       device.model = 'mobile'

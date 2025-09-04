@@ -11,6 +11,25 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
-  }
+    "noUncheckedSideEffectImports": true,
+    "typeRoots": ["node_modules/@types"],
+    "types": [
+      "vue",
+      "@easily-js/components/src",
+      "@easily-js/components/src/components.d.ts"
+    ]
+  },
+  "include": [
+    "packages",
+    "docs/.vitepress/components/*.vue",
+    "docs/.vitepress/*.ts",
+    "meta",
+    "vitest.config.ts",
+    "*.d.ts",
+    "play",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ]
 }

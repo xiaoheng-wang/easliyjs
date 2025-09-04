@@ -1,0 +1,51 @@
+{
+  "name": "@easily-js/vue-form-validator",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Vue 3 表单验证组合式 API，提供类似 Ant Design Vue Form 的强大表单验证功能",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "vue3",
+    "form",
+    "validation",
+    "validator",
+    "element-plus",
+    "typescript"
+  ],
+  "author": "xiaoheng",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vitest": "^1.0.0",
+    "vue": "^3.3.0",
+    "@vue/test-utils": "^2.4.0",
+    "jsdom": "^23.0.0"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0",
+    "async-validator": "^4.0.0"
+  }
+}
