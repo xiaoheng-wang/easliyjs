@@ -44,7 +44,9 @@ export const isBoolean = (val: any): val is boolean => typeof val === 'boolean'
  * @param {any} val - 要检查的值。
  * @returns {val is T} - 如果该值是函数类型，则返回 `true`。
  */
-export const isFunction = <T extends (...args: any[]) => any>(val: any): val is T => typeof val === 'function'
+export function isFunction<T extends (...args: any[]) => any>(val: any): val is T {
+  return typeof val === 'function'
+}
 
 /**
  * 检查一个值是否为数字类型。
@@ -68,7 +70,9 @@ export const isString = (val: unknown): val is string => typeof val === 'string'
  * @param {any} val - 要检查的值。
  * @returns {val is object} - 如果该值是对象类型，则返回 `true`。
  */
-export const isObject = (val: any): val is object => toString.call(val) === '[object Object]'
+export function isObject(val: any): val is object {
+  return toString.call(val) === '[object Object]'
+}
 
 /**
  * 检查一个值是否为窗口对象。
@@ -76,7 +80,9 @@ export const isObject = (val: any): val is object => toString.call(val) === '[ob
  * @param {any} val - 要检查的值。
  * @returns {val is Window} - 如果该值是窗口对象，则返回 `true`。
  */
-export const isWindow = (val: any): val is Window => typeof window !== 'undefined' && toString.call(val) === '[object Window]'
+export function isWindow(val: any): val is Window {
+  return typeof window !== 'undefined' && toString.call(val) === '[object Window]'
+}
 
 /**
  * 获取当前时间的时间戳。
@@ -100,7 +106,9 @@ export const timestamp = (): number => +Date.now()
  * @param {number} max - 最大值。
  * @returns {number} - 限制后的数字。
  */
-export const clamp = (n: number, min: number, max: number): number => Math.min(max, Math.max(min, n))
+export function clamp(n: number, min: number, max: number): number {
+  return Math.min(max, Math.max(min, n))
+}
 
 /**
  * 空函数。
@@ -123,7 +131,10 @@ export function rand(min: number, max: number): number {
  * 检测当前设备是否是 iOS 设备。
  * @returns {boolean} 如果当前设备是 iOS 设备，则返回 true；否则返回 false。
  */
-export const isIOS = /* #__PURE__ */ isClient && window?.navigator?.userAgent && /iP(?:ad|hone|od)/.test(window.navigator.userAgent)
+export const isIOS
+/* #__PURE__ */ = isClient
+&& window?.navigator?.userAgent
+&& /iP(?:ad|hone|od)/.test(window.navigator.userAgent)
 
 /**
  * 检查对象是否拥有指定的属性。
@@ -131,4 +142,6 @@ export const isIOS = /* #__PURE__ */ isClient && window?.navigator?.userAgent &&
  * @param {K} key - 要检查的属性。
  * @returns {key is K} 如果对象拥有指定的属性，则返回 true；否则返回 false。
  */
-export const hasOwn = <T extends object, K extends keyof T>(val: T, key: K): key is K => Object.prototype.hasOwnProperty.call(val, key)
+export function hasOwn<T extends object, K extends keyof T>(val: T, key: K): key is K {
+  return Object.prototype.hasOwnProperty.call(val, key)
+}

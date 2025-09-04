@@ -1003,7 +1003,7 @@ onBeforeUnmount(() => {
 
 ### 问题报告
 
-如果遇到问题，请在 [GitHub Issues](https://github.com/easily-js/vue-form-validator/issues) 中报告，并提供：
+如果遇到问题，请在 [GitHub Issues](https://github.com/xiaoheng-wang/easliyjs/issues) 中报告，并提供：
 
 - 详细的问题描述
 - 最小可复现示例
@@ -1011,7 +1011,7 @@ onBeforeUnmount(() => {
 
 ### 许可证
 
-本项目基于 MIT 许可证开源，详见 [LICENSE](https://github.com/easily-js/vue-form-validator/blob/main/LICENSE) 文件。
+本项目基于 MIT 许可证开源，详见 [LICENSE](https://github.com/xiaoheng-wang/easliyjs/LICENSE) 文件。
 
 ---
 

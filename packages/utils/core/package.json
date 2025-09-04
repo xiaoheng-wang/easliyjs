@@ -19,7 +19,7 @@
   ],
   "keywords": [],
   "author": "xiaoheng",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@easily-js/utils-shared": "workspace:^"
   }
