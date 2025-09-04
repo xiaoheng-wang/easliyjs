@@ -5,12 +5,13 @@
   "type": "module",
   "description": "Vue 3 表单验证组合式 API，提供类似 Ant Design Vue Form 的强大表单验证功能",
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
   },
   "files": [
@@ -29,7 +30,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiaoheng-wang/easliyjs"
+    "url": "git+https://github.com/xiaoheng-wang/easliyjs.git"
   },
   "scripts": {
     "test": "vitest",

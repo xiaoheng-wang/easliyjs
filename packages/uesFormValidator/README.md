@@ -200,7 +200,8 @@ const model = reactive<UserForm>({
 })
 
 // 使用 useForm
-const { validationState, validate, validateField, resetFields, clearValidate } = useForm(model, rules)
+const { validationState, validate, validateField, resetFields, clearValidate } =
+  useForm(model, rules)
 
 // 提交处理
 async function handleSubmit() {
@@ -275,7 +276,10 @@ const { validationState } = useForm(model, rules, {
     <el-input v-model="model.user.profile.name" />
   </el-form-item>
 
-  <el-form-item label="邮箱" v-bind="validationState['user.profile.contact.email']">
+  <el-form-item
+    label="邮箱"
+    v-bind="validationState['user.profile.contact.email']"
+  >
     <el-input v-model="model.user.profile.contact.email" />
   </el-form-item>
 </template>
@@ -342,7 +346,11 @@ const rules = {
 ### useForm
 
 ```typescript
-function useForm<T extends UseFormModel>(modelRef?: T | Ref<T>, rulesRef?: UseFormRules<T> | Ref<UseFormRules<T>>, options?: UseFormOptions): UseFormResult<T>
+function useForm<T extends UseFormModel>(
+  modelRef?: T | Ref<T>,
+  rulesRef?: UseFormRules<T> | Ref<UseFormRules<T>>,
+  options?: UseFormOptions
+): UseFormResult<T>
 ```
 
 #### 参数
@@ -649,9 +657,9 @@ const { validate, validationState, resetFields } = useForm(model, rules)
 ## 📞 支持
 
 - 📖 [详细文档](./useForm使用指南.md)
-- 🐛 [报告问题](https://github.com/easily-js/vue-form-validator/issues)
-- 💬 [讨论交流](https://github.com/easily-js/vue-form-validator/discussions)
-- ⭐ [GitHub 仓库](https://github.com/easily-js/vue-form-validator)
+- 🐛 [报告问题](https://github.com/xiaoheng-wang/easliyjs/vue-form-validator/issues)
+- 💬 [讨论交流](https://github.com/xiaoheng-wang/easliyjs/vue-form-validator/discussions)
+- ⭐ [GitHub 仓库](https://github.com/xiaoheng-wang/easliyjs/xiaoheng/vue-form-validator)
 
 ---
 

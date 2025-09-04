@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup'
 
 const baseConfig = {
-  dts: false, // 暂时禁用 .d.ts 文件生成以避免配置问题
+  dts: true, // 启用 .d.ts 文件生成
   metafile: true, // 添加 meta 文件
   minify: true, // 压缩
   splitting: false,
@@ -29,6 +29,7 @@ export default defineConfig([
     format: ['cjs', 'esm'], // Vue 组件通常用 cjs 和 esm
     outDir: 'packages/uesFormValidator/dist',
     external: ['vue', 'async-validator'], // Vue 相关的外部依赖
+    tsconfig: './tsconfig.build-vue-form.json', // 使用专用的 tsconfig
     ...baseConfig,
   },
   {
@@ -36,6 +37,11 @@ export default defineConfig([
     format: ['cjs', 'esm'], // Vue 组件通常用 cjs 和 esm
     outDir: 'packages/components/dist',
     external: ['vue'], // Vue 相关的外部依赖
-    ...baseConfig,
+    dts: false, // 暂时禁用组件的类型生成，因为有 .vue 文件
+    metafile: true,
+    minify: true,
+    splitting: false,
+    sourcemap: true,
+    clean: true,
   },
 ])

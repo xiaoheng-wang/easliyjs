@@ -1,0 +1,20 @@
+{
+  "extends": "./config/typescript/base.json",
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "noEmit": false,
+    "outDir": "./dist",
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["packages/uesFormValidator/**/*"],
+  "exclude": [
+    "packages/uesFormValidator/dist",
+    "packages/uesFormValidator/__tests__",
+    "packages/uesFormValidator/node_modules"
+  ]
+}
