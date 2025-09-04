@@ -657,9 +657,8 @@ const { validate, validationState, resetFields } = useForm(model, rules)
 ## 📞 支持
 
 - 📖 [详细文档](./useForm使用指南.md)
-- 🐛 [报告问题](https://github.com/xiaoheng-wang/easliyjs/vue-form-validator/issues)
-- 💬 [讨论交流](https://github.com/xiaoheng-wang/easliyjs/vue-form-validator/discussions)
-- ⭐ [GitHub 仓库](https://github.com/xiaoheng-wang/easliyjs/xiaoheng/vue-form-validator)
+- 🐛 [报告问题](https://github.com/xiaoheng-wang/easliyjs/issues)
+- ⭐ [GitHub 仓库](https://github.com/xiaoheng-wang/easliyjs)
 
 ---
 
